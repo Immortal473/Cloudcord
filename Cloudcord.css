@@ -1,1 +1,140 @@
+/* Hide the buttons next to mute and deafen */
+div[class*=-micButtonParent] {
+  button[role="switch"] {
+    border-radius: var(--radius-sm) !important;
+
+    ~button {
+      display: none;
+    }
+  }
+}
+
+
+
+
+.vc-imgzoom-lens {
+  /* remove prestyles */
+  border: none;
+  box-shadow: none;
+  filter: none;
+  margin: 0;
+}
+
+.vc-imgzoom-lens::before {
+  /* setup element */
+  content: "";
+  inset: 0;
+  position: absolute;
+  /* background image */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAABIUExURR4/WR4/WC5Qei1OeUtomUVik6Xb/IO6387q/2SCo////////4KjxwkfNWecvT9bjCtMdx0+WPn8/zEeCkApEH1QFLGHO////17z+TAAAAATdFJOU+7uzMx4eCcnDQ0bDQ0NJ3jM7lGLVcWxAAAAAWJLR0QKaND0VgAAAAd0SU1FB+kKFQsmAvFtUg8AAAHHSURBVHja7dxbbgIxDEDRAcqjpWV4dv9L5QdRCZAmVoQDnXMXENtnAekOI69rvUDrALReoHUAWi/QOgCtF2jdFeA4sgAAAAAAAAAA9wBdcpPkTpeu994BTHOb5VYC8JHaPLUygEVmy8xKAVaJfSYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA8r4GWg/0XRkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4PkAQwcCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4PYDKbLyOP1h4QwX7UT6BNv90BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF4PYH8TAAAAAAAAAAAAAAAAAAAAACAfoLbIAY+KzHrKBwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALwRQGabykLDCgFS6yuLTSsCyG1bWXBcAUByu8qi8wYBTv+830sAAAAAAAAAgD+AW4ixBAAAAAAAAIwY4AxxXxHln5WOZAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNS0xMC0yMVQxMToyNjo1NCswMDowMPFicCAAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjUtMTAtMTZUMDc6NTQ6MTArMDA6MDBOfbqRAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDI1LTEwLTIxVDExOjM4OjAyKzAwOjAwI109bgAAAABJRU5ErkJggg==);
+  /* image magick my goat */
+  /* prevent it from ninetiles */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  /* necessary so it overlays above the zoomed item */
+  z-index: 10
+}
+
+
+
+
+
+
+/* Collapsable user control adopted for chillax*/
+._5e434347c823b592-panels {
+  left: var(--space-sm) !important;
+  height: 57px !important;
+  width: 56px !important;
+  border-radius: 30px !important;
+  display: flex !important;
+  flex-direction: column;
+  overflow: hidden;
+  transition-duration: 0.35s;
+  z-index: 50000;
+  pointer-events: all;
+  border: 1px solid var(--border-subtle) !important;
+
+  &:has(.e131a99484292a19-container) {
+    border: 1px solid var(--border-normal);
+  }
+}
+
+.e131a99484292a19-wrapper {
+  height: 0;
+  overflow: hidden;
+
+}
+
+._5e434347c823b592-panels:hover {
+  width: 300px !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column;
+  border-radius: 15px !important;
+  filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.123));
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  .e131a99484292a19-wrapper {
+    height: auto !important;
+  }
+}
+
+._5e434347c823b592-sidebar {
+  overflow: visible !important;
+}
+
+._2637a2609f343032-container {
+  padding-bottom: 0px !important;
+}
+
+._99e7cad8d4c55236-scroller {
+  margin-bottom: 0px !important;
+}
+
+._7aaec78b97ff00f7-bottom {
+  bottom: 0px !important;
+}
+
+
+.visual-refresh [class^="panels_"] [class^="container__"] [class^="buttons__"] {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: left;
+  transition: opacity 0.1s ease-in, transform 0.1s ease-in;
+  will-change: opacity, transform;
+}
+
+.visual-refresh [class^="panels_"]:hover [class^="container__"] [class^="buttons__"] {
+
+  transform: scale(1);
+
+  opacity: 1;
+}
+
+.visual-refresh ._5dec784a68542d60-panel {
+  display: none;
+}
+
+.visual-refresh [class^="panels_"]:hover ._5dec784a68542d60-panel {
+  display: block;
+}
+
+._5e434347c823b592-panels {
+  left: 10px !important;
+}
+
+._37e49614b9f110a9-avatarWrapper:hover {
+  min-width: 35px !important;
+  max-width: 35px !important;
+  transition: none !important;
+}
+
+
+
+
+
+
+
 
