@@ -166,7 +166,7 @@ div[class*=-micButtonParent] {
     width: 100%; height: 100%;
 
     /* --- YOUR TICKER URL --- */
-    background-image: url("https://discord-news-ticker.onrender.com/news_modern.svg");
+    background-image: url("https://discord-news-ticker.onrender.com/news_ticker.png");
     
     /* Logic: contain keeps the aspect ratio so text doesn't look stretched */
     background-size: 3000px contain;
